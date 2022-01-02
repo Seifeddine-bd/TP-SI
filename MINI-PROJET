@@ -1,0 +1,205 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<stdbool.h>
+#include<conio.h>
+#include<math.h>
+// PARTIE DECLARATION 
+typedef struct{
+	int annee_rec;
+	int num_ens;
+	char c[10];
+}code_ens; 
+
+typedef struct{
+	int jour;
+	int mois;
+	int annee;
+}date_n;
+
+typedef struct{
+	char nom[20];
+	char prenom[20];
+	date_n date_n;
+	code_ens code_ens;
+}controle;
+
+void ajout(){
+	
+
+}
+
+void supression(){
+
+
+}
+
+void modification () {
+
+
+}
+
+void recherche(){
+	
+
+}
+
+// MAIN METHODE
+
+int main(){
+		code_ens c ;
+ 		date_n d;
+		controle co;
+	    int i;
+	
+	FILE *fptr;
+	fptr = fopen("D:\\fichier.txt","w");
+	if (fptr==NULL)
+	{
+		printf("ERREUR!");
+		exit(1);
+	}
+//DEBUT DU PROGRAMME
+		printf ("**************************************************Bienvenue**************************************************\n");
+// LES INFORMATIONS DES UTILISATEURS		
+	for (i=1;i<5;i++){
+		printf("\nentrer les information d'enseignant no %d\n",i);
+		printf ("\nentrer votre nom:\n");
+			scanf("%s",&co.nom);
+		printf ("\nentrer votre prenom:\n");
+			scanf("%s",&co.prenom);
+		printf("\nentrer votre categorie\n");
+			scanf("%s",&c.c);
+	while (strcmp(c.c,"vacataire")&&strcmp(c.c,"permanent")&&strcmp(c.c,"VACATAIRE")&&strcmp(c.c,"PERMANENT"))
+	{
+		printf("\nfaux\n");
+		scanf("%s",&c.c);
+
+	}
+		printf ("\nentrer votre date de naissance:\n");
+ 			scanf("%d""%d""%d",&d.jour,&d.mois,&d.annee);	
+	while (d.jour>31 || d.jour<0 || d.mois>12 || d.mois<0 || d.annee>1996|| d.annee<1956){
+if(d.mois<13)
+{
+	while ((d.mois==1)||(d.jour>31))
+	{
+				printf ("\nerreur\n");
+				scanf("%d""%d""%d",&d.jour,&d.mois,&d.annee);
+	}
+	while (((d.mois==2))||((d.jour>29)||(d.jour>28)))
+	{
+		while(d.annee==1960||d.annee==1964||d.annee==1968||d.annee==1972||d.annee==1976||d.annee==1980||d.annee==1984||d.annee==1988||d.annee==1992||d.annee==1996)
+	    {
+			if (d.jour>29)
+			{
+			printf ("\nerreur\n");
+			scanf("%d""%d""%d",&d.jour,&d.mois,&d.annee);
+			}
+	while(d.annee!=1960||d.annee!=1964||d.annee!=1968||d.annee!=1972||d.annee!=1976||d.annee!=1980||d.annee!=1984||d.annee!=1988||d.annee!=1992||d.annee!=1996)
+	{
+			if (d.jour>28)
+			{
+			printf ("\nerreur\n");
+			scanf("%d""%d""%d",&d.jour,&d.mois,&d.annee);
+			}
+	}
+	}
+	}
+	while ((d.mois==3)||(d.jour>31))
+	{
+			printf ("\nerreur\n");
+			scanf("%d""%d""%d",&d.jour,&d.mois,&d.annee);
+		
+	}
+	while ((d.mois==4)||(d.jour>30))
+	{
+		printf ("\nerreur\n");
+		scanf("%d""%d""%d",&d.jour,&d.mois,&d.annee);
+	}
+	while ((d.mois==5)||(d.jour>31))
+	{
+		printf ("\nerreur\n");
+		scanf("%d""%d""%d",&d.jour,&d.mois,&d.annee);
+	}
+	while ((d.mois==6)||(d.jour>30))
+	{
+		printf ("\nerreur\n");
+		scanf("%d""%d""%d",&d.jour,&d.mois,&d.annee);
+	}
+	while ((d.mois==7)||(d.jour>31))
+	{
+		printf ("\nerreur\n");
+		scanf("%d""%d""%d",&d.jour,&d.mois,&d.annee);
+	}
+	while ((d.mois==8)||(d.jour>31))
+	{
+		printf ("\nerreur\n");
+		scanf("%d""%d""%d",&d.jour,&d.mois,&d.annee);
+	}
+	while ((d.mois==9)||(d.jour>30))
+	{
+		printf ("\nerreur\n");
+		scanf("%d""%d""%d",&d.jour,&d.mois,&d.annee);
+	}
+	while ((d.mois==10)||(d.jour>31))
+	{
+		printf ("\nerreur\n");
+		scanf("%d""%d""%d",&d.jour,&d.mois,&d.annee);
+		
+	}
+	while ((d.mois==11)||(d.jour>30))
+	{
+		printf ("\nerreur\n");
+		scanf("%d""%d""%d",&d.jour,&d.mois,&d.annee);
+		
+	}
+	while ((d.mois==12)||(d.jour>31))
+	{
+		printf ("\nerreur\n");
+		scanf("%d""%d""%d",&d.jour,&d.mois,&d.annee);
+	}
+}
+else 
+	printf ("\nerreur\n");
+		printf("\nerreur\n");
+  		scanf("%d""%d""%d",&d.jour,&d.mois,&d.annee);	
+		  }
+		printf("\nsaisir l'annee de recrutement\n");
+	 		scanf ("%d",&c.annee_rec);
+	
+	while (!(c.annee_rec-d.annee>=23))
+	{
+ 		printf ("\nerreur\n");
+		scanf ("%d",&c.annee_rec);
+	}
+	
+	
+	while (c.annee_rec>2019 || c.annee_rec<1980 )
+	{
+		printf("\nerreur\n");
+		scanf ("%d",&c.annee_rec);
+	}
+// AFFICHAGE FINALE		
+			fprintf(fptr,"l'enseignant no %d",i);		
+			fprintf(fptr,"\nle nom : %s \n",co.nom);		
+			fprintf(fptr,"\nle prenom : %s \n",co.prenom);
+			fprintf(fptr,"\nla categorie : %s \n",c.c);
+			fprintf(fptr,"\nla date de naissance : %d/%d/%d \n",d.jour,d.mois,d.annee);
+		  	fprintf(fptr,"\nl'annee de recrutement  : %d \n",c.annee_rec);
+		if(strcmp(c.c,"vacataire")==0||strcmp(c.c,"VACATAIRE")==0)
+		{
+				fprintf(fptr,"\n***************************************************************************************************************************\n");
+				fprintf(fptr,"************************************************Le code d'enseignat no %d : %dV%.3d************************************************",i,c.annee_rec,i);
+				fprintf(fptr,"\n***************************************************************************************************************************\n");
+		}
+		else if(strcmp(c.c,"permanent")==0||strcmp(c.c,"PERMANENT")==0)
+		{
+				fprintf(fptr,"\n***************************************************************************************************************************\n");
+		fprintf(fptr,"************************************************Le code d'enseignat no %d : %dP%.3d************************************************",i,c.annee_rec,i);
+				fprintf(fptr,"\n***************************************************************************************************************************\n");
+		}
+	//	fprintf(fptr, "\n\t*\t*\t*\t*\t*\tvotre information :\t*\t*\t*\t*\t*\t* \n \t\t\t\t\tle nom et le prenom c'est : %s %s \n\t\t\t\t\tdate de naissance : %.2d / %.2d / %.4d \n ",co.nom,co.prenom,d.jour,d.mois,d.annee);
+	//	fprintf(fptr, "\t\t\t\t\tvotre annee de recrutement c'est : %d",c.annee_rec);}	 
+	fclose(fptr);}
+
+return 0;}
